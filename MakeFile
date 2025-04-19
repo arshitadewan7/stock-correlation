@@ -1,0 +1,18 @@
+# Compiler and flags
+CXX = g++
+CXXFLAGS = -std=c++11 -I/opt/homebrew/opt/tesseract/include -I/opt/homebrew/opt/leptonica/include
+LDFLAGS = -L/opt/homebrew/opt/tesseract/lib -L/opt/homebrew/opt/leptonica/lib -ltesseract
+
+# Source files
+SOURCES = main.cpp CSVReader.cpp CorrelationMatrix.cpp NetworkExporter.cpp
+
+# Output executable
+OUTPUT = stock_network
+
+# Rule to build the executable
+$(OUTPUT): $(SOURCES)
+	$(CXX) $(SOURCES) -o $(OUTPUT) $(CXXFLAGS) $(LDFLAGS)
+
+# Clean up
+clean:
+	rm -f $(OUTPUT)

@@ -1,0 +1,12 @@
+graph correlation {
+  "Date" -- "AAPL" [weight=nan]
+  "Date" -- "MSFT" [weight=nan]
+  "Date" -- "GOOGL" [weight=nan]
+  "Date" -- "AMZN" [weight=nan]
+  "AAPL" -- "MSFT" [weight=-0.822866]
+  "AAPL" -- "GOOGL" [weight=0.998359]
+  "AAPL" -- "AMZN" [weight=0.987584]
+  "MSFT" -- "GOOGL" [weight=-0.78898]
+  "MSFT" -- "AMZN" [weight=-0.901914]
+  "GOOGL" -- "AMZN" [weight=0.976969]
+}
